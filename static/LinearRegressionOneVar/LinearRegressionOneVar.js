@@ -26,7 +26,7 @@ function mouseClicked() {
 function convergence() {
 	if (points.length == 0)
 		return;
-	const lrate = 0.1
+	const lrate = 0.5
 	x0p = 0
 	x1p = 0
 	points.forEach((p) => {
@@ -36,8 +36,8 @@ function convergence() {
 		x1p = x1p + (error * p.x)
 
 	}) 
-	x0 = x0 - lrate / points.length * x0p
-	x1 = x1 - lrate / points.length * x1p
+	x0 = x0 - lrate * (1 / points.length) * x0p
+	x1 = x1 - lrate * (1 / points.length) * x1p
 }
 
 
