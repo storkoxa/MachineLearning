@@ -1,0 +1,77 @@
+<html>
+  <head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.2.2/math.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+
+    <script src="../p5.min.js"></script>
+    <script src="../ml-web.js"></script>
+    <script src="LogisticRegression.js"></script>
+
+	<style>
+		table {
+		  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		  border-collapse: collapse;
+		}
+
+		 td, th {
+		  border: 1px solid #ddd;
+		  padding: 8px;
+		}
+
+		tr:nth-child(even){background-color: #f2f2f2;}
+
+		tr:hover {background-color: #ddd;}
+
+		th {
+		  padding-top: 12px;
+		  padding-bottom: 12px;
+		  text-align: left;
+		  background-color: #23a3FF;
+		  color: white;
+		}
+		.result {
+			background-color: #4CAF50;	
+		}
+		.prediction {
+			background-color: #3A863A;	
+		}
+	</style>
+
+  </head>
+
+
+  <body>
+	 <div style="width: 100%; overflow: hidden;">
+
+	  	<div id="canvas" style="display: inline-block; width: 45%;">
+	  	</div>
+
+	  	<div style="display: inline-block; width: 45%">
+	  		  <canvas id="JCost" width="400" height="400"></canvas>
+	  	</div>
+
+	  	<div style="display: inline-block; width: 45%; margin-right:30px;">
+		  	<div>
+		  		Alpha:  <input type="text" id="alpha" value="0.3"><br/>
+		  		lambda:  <input type="text" id="lambda" value="0.1"><br/>
+		  		Iterations: <input type="text" id="iterations" value="150"><br/>
+		  		<button  id="calculate" value="calculate" disabled="true">Learn</button>
+		  		<button  id="predict" value="Predict" disabled="true">Predict</button>
+		  		<button  id="fillP" >Fill with Predict</button>
+		  		<button  id="cleanP">Clean Prediction</button>
+
+		  		<table id="data"></table>
+
+		  	</div>
+		</div>
+	  	<div id="theta-result" style="display: inline-block; width: 45%;">
+	  		
+		</div>
+	</div>
+
+
+
+  </body>
+</html>

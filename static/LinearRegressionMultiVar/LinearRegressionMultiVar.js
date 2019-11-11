@@ -157,7 +157,7 @@ $(document).ready(function() {
 
 		//prediction
 		if (prediction != null && prediction != "") {
-			var p = math.matrix([JSON.parse(prediction)]);
+			var p = math.matrix(JSON.parse(prediction));
 			result = predict(p, XN_mean_std[1],  XN_mean_std[2], theta)
 			updateTable(p, result)
 		}
@@ -174,6 +174,7 @@ $(document).ready(function() {
 var updateTable = (p, result) => {
 	let table = $("#data");
 
+	console.log(result)
 	pm = math.size(p).get([0]);
 	pn = math.size(p).get([1]);
 	console.log(result)
