@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "mathjs": "^6.2.3"
+    "mathjs": "^7.5.1"
   }
 }
